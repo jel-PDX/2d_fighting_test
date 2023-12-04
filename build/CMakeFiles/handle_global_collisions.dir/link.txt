@@ -1,0 +1,2 @@
+/usr/bin/ar qc libhandle_global_collisions.a CMakeFiles/handle_global_collisions.dir/src/handle_global_collisions.cpp.o
+/usr/bin/ranlib libhandle_global_collisions.a
