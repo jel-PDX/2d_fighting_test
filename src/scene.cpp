@@ -1,4 +1,4 @@
-#include "game.h"
+#include "scene.h"
 
 #include "dynamic_object.h"
 #include "game_util.h"
@@ -6,9 +6,9 @@
 #include "spatial_hash_grid.h"
 #include "static_object.h"
 
-Game::Game() = default;
+Scene::Scene() = default;
 
-void Game::addEntity(string txr_path, sf::Vector2<int> pos, char type) {
+void Scene::addEntity(string txr_path, sf::Vector2<int> pos, char type) {
   Entity* e{};
   // create static obj
   if (type == 's') {
@@ -24,7 +24,7 @@ void Game::addEntity(string txr_path, sf::Vector2<int> pos, char type) {
   else if (type == 'p') {
     e = new Player(txr_path);
     e->setPos(pos.x, pos.y);
-    g_player = (Player*)e;
+    s_player = (Player*)e;
   } else
     return;
 

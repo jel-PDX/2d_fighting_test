@@ -57,6 +57,7 @@ set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/collisions_util.dir/DependInfo.cmake"
   "CMakeFiles/handle_global_collisions.dir/DependInfo.cmake"
   "CMakeFiles/game_util.dir/DependInfo.cmake"
-  "CMakeFiles/game.dir/DependInfo.cmake"
+  "CMakeFiles/scene.dir/DependInfo.cmake"
+  "CMakeFiles/ft.dir/DependInfo.cmake"
   "CMakeFiles/2d_fighting_test.dir/DependInfo.cmake"
   )

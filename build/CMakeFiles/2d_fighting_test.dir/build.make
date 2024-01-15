@@ -98,10 +98,11 @@ CMakeFiles/2d_fighting_test.dir/src/main.cpp.s: cmake_force
 2d_fighting_test: libcollision.a
 2d_fighting_test: libcollisions_util.a
 2d_fighting_test: libentity.a
+2d_fighting_test: libscene.a
+2d_fighting_test: libft.a
 2d_fighting_test: libplayer.a
 2d_fighting_test: libstatic_object.a
 2d_fighting_test: libdynamic_object.a
-2d_fighting_test: libgame.a
 2d_fighting_test: /usr/lib/x86_64-linux-gnu/libsfml-graphics.so.2.5.1
 2d_fighting_test: /usr/lib/x86_64-linux-gnu/libsfml-window.so.2.5.1
 2d_fighting_test: /usr/lib/x86_64-linux-gnu/libsfml-audio.so.2.5.1

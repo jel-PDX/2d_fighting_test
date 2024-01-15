@@ -234,17 +234,30 @@ game_util/fast:
 .PHONY : game_util/fast
 
 #=============================================================================
-# Target rules for targets named game
+# Target rules for targets named scene
 
 # Build rule for target.
-game: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 game
-.PHONY : game
+scene: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 scene
+.PHONY : scene
 
 # fast build rule for target.
-game/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/build
-.PHONY : game/fast
+scene/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/scene.dir/build.make CMakeFiles/scene.dir/build
+.PHONY : scene/fast
+
+#=============================================================================
+# Target rules for targets named ft
+
+# Build rule for target.
+ft: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ft
+.PHONY : ft
+
+# fast build rule for target.
+ft/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft.dir/build.make CMakeFiles/ft.dir/build
+.PHONY : ft/fast
 
 #=============================================================================
 # Target rules for targets named 2d_fighting_test
@@ -355,29 +368,29 @@ src/entity.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/entity.dir/build.make CMakeFiles/entity.dir/src/entity.cpp.s
 .PHONY : src/entity.cpp.s
 
-src/game.o: src/game.cpp.o
-.PHONY : src/game.o
+src/ft.o: src/ft.cpp.o
+.PHONY : src/ft.o
 
 # target to build an object file
-src/game.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/src/game.cpp.o
-.PHONY : src/game.cpp.o
+src/ft.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft.dir/build.make CMakeFiles/ft.dir/src/ft.cpp.o
+.PHONY : src/ft.cpp.o
 
-src/game.i: src/game.cpp.i
-.PHONY : src/game.i
+src/ft.i: src/ft.cpp.i
+.PHONY : src/ft.i
 
 # target to preprocess a source file
-src/game.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/src/game.cpp.i
-.PHONY : src/game.cpp.i
+src/ft.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft.dir/build.make CMakeFiles/ft.dir/src/ft.cpp.i
+.PHONY : src/ft.cpp.i
 
-src/game.s: src/game.cpp.s
-.PHONY : src/game.s
+src/ft.s: src/ft.cpp.s
+.PHONY : src/ft.s
 
 # target to generate assembly for a file
-src/game.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/src/game.cpp.s
-.PHONY : src/game.cpp.s
+src/ft.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft.dir/build.make CMakeFiles/ft.dir/src/ft.cpp.s
+.PHONY : src/ft.cpp.s
 
 src/game_util.o: src/game_util.cpp.o
 .PHONY : src/game_util.o
@@ -475,6 +488,30 @@ src/player.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/player.dir/build.make CMakeFiles/player.dir/src/player.cpp.s
 .PHONY : src/player.cpp.s
 
+src/scene.o: src/scene.cpp.o
+.PHONY : src/scene.o
+
+# target to build an object file
+src/scene.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/scene.dir/build.make CMakeFiles/scene.dir/src/scene.cpp.o
+.PHONY : src/scene.cpp.o
+
+src/scene.i: src/scene.cpp.i
+.PHONY : src/scene.i
+
+# target to preprocess a source file
+src/scene.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/scene.dir/build.make CMakeFiles/scene.dir/src/scene.cpp.i
+.PHONY : src/scene.cpp.i
+
+src/scene.s: src/scene.cpp.s
+.PHONY : src/scene.s
+
+# target to generate assembly for a file
+src/scene.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/scene.dir/build.make CMakeFiles/scene.dir/src/scene.cpp.s
+.PHONY : src/scene.cpp.s
+
 src/spatial_hash_grid.o: src/spatial_hash_grid.cpp.o
 .PHONY : src/spatial_hash_grid.o
 
@@ -536,10 +573,11 @@ help:
 	@echo "... collisions_util"
 	@echo "... dynamic_object"
 	@echo "... entity"
-	@echo "... game"
+	@echo "... ft"
 	@echo "... game_util"
 	@echo "... handle_global_collisions"
 	@echo "... player"
+	@echo "... scene"
 	@echo "... spatial_hash_grid"
 	@echo "... static_object"
 	@echo "... src/collision.o"
@@ -554,9 +592,9 @@ help:
 	@echo "... src/entity.o"
 	@echo "... src/entity.i"
 	@echo "... src/entity.s"
-	@echo "... src/game.o"
-	@echo "... src/game.i"
-	@echo "... src/game.s"
+	@echo "... src/ft.o"
+	@echo "... src/ft.i"
+	@echo "... src/ft.s"
 	@echo "... src/game_util.o"
 	@echo "... src/game_util.i"
 	@echo "... src/game_util.s"
@@ -569,6 +607,9 @@ help:
 	@echo "... src/player.o"
 	@echo "... src/player.i"
 	@echo "... src/player.s"
+	@echo "... src/scene.o"
+	@echo "... src/scene.i"
+	@echo "... src/scene.s"
 	@echo "... src/spatial_hash_grid.o"
 	@echo "... src/spatial_hash_grid.i"
 	@echo "... src/spatial_hash_grid.s"

@@ -7,10 +7,10 @@ class Player;
 
 using std::string;
 
-class Game {
+class Scene {
  public:
-  Player* g_player;
+  Player* s_player;
 
-  Game();
+  Scene();
   void addEntity(string txr_path, sf::Vector2<int> pos, char type);
 };

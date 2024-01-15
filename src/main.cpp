@@ -7,10 +7,11 @@
 #include "collisions_util.h"
 #include "dynamic_object.h"
 #include "entity.h"
-#include "game.h"
+#include "ft.h"
 #include "game_util.h"
 #include "handle_global_collisions.h"
 #include "player.h"
+#include "scene.h"
 #include "spatial_hash_grid.h"
 #include "static_object.h"
 
@@ -19,15 +20,16 @@ int main() {
   window.setPosition({400, 100});
   window.setFramerateLimit(60);
 
-  Game game{};
+  FT game{};
+  game.addScene("1");
 
-  game.addEntity("../assets/player.png", {20, 300}, 'p');
-  game.addEntity("../assets/small_box.png", {500, 300}, 'd');
-  game.addEntity("../assets/small_box.png", {500, 200}, 'd');
-  game.addEntity("../assets/big_box.png", {750, 572}, 's');
-  game.addEntity("../assets/big_box.png", {750, 265}, 's');
-  game.addEntity("../assets/small_box.png", {300, 300}, 'd');
-  game.addEntity("../assets/ground.png", {0, 700}, 's');
+  game.getScene("1")->addEntity("../assets/player.png", {20, 300}, 'p');
+  game.getScene("1")->addEntity("../assets/small_box.png", {500, 300}, 'd');
+  game.getScene("1")->addEntity("../assets/small_box.png", {500, 200}, 'd');
+  game.getScene("1")->addEntity("../assets/big_box.png", {750, 572}, 's');
+  game.getScene("1")->addEntity("../assets/big_box.png", {750, 265}, 's');
+  game.getScene("1")->addEntity("../assets/small_box.png", {300, 300}, 'd');
+  game.getScene("1")->addEntity("../assets/ground.png", {0, 700}, 's');
 
   bool W_PRESSED{}, A_PRESSED{}, S_PRESSED{}, D_PRESSED{}, SPACE_PRESSED{};
 
@@ -82,14 +84,15 @@ int main() {
 
     // State Handling
     if (A_PRESSED) {
-      game.g_player->setMoveDir(Player::LEFT);
+      game.getScene("1")->s_player->setMoveDir(Player::LEFT);
     } else if (D_PRESSED) {
-      game.g_player->setMoveDir(Player::RIGHT);
+      game.getScene("1")->s_player->setMoveDir(Player::RIGHT);
     } else
-      game.g_player->setMoveDir(Player::HALT);
+      game.getScene("1")->s_player->setMoveDir(Player::HALT);
 
-    if (SPACE_PRESSED && game.g_player->getJump() == Player::NO_JUMP)
-      game.g_player->setJump(Player::JUMP);
+    if (SPACE_PRESSED &&
+        game.getScene("1")->s_player->getJump() == Player::NO_JUMP)
+      game.getScene("1")->s_player->setJump(Player::JUMP);
 
     // Update Entities
     for (Entity* e : game_entities) e->update();
