@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/james/projects/2d_fighting_test
+CMAKE_SOURCE_DIR = /home/james/Desktop/Programming/2d_fighting_test
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/james/projects/2d_fighting_test/build
+CMAKE_BINARY_DIR = /home/james/Desktop/Programming/2d_fighting_test/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,9 +87,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/james/projects/2d_fighting_test/build/CMakeFiles /home/james/projects/2d_fighting_test/build//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/james/Desktop/Programming/2d_fighting_test/build/CMakeFiles /home/james/Desktop/Programming/2d_fighting_test/build//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/james/projects/2d_fighting_test/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/james/Desktop/Programming/2d_fighting_test/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -234,17 +234,17 @@ game_util/fast:
 .PHONY : game_util/fast
 
 #=============================================================================
-# Target rules for targets named tests
+# Target rules for targets named game
 
 # Build rule for target.
-tests: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests
-.PHONY : tests
+game: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 game
+.PHONY : game
 
 # fast build rule for target.
-tests/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/tests.dir/build.make CMakeFiles/tests.dir/build
-.PHONY : tests/fast
+game/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/build
+.PHONY : game/fast
 
 #=============================================================================
 # Target rules for targets named 2d_fighting_test
@@ -258,32 +258,6 @@ tests/fast:
 2d_fighting_test/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/2d_fighting_test.dir/build.make CMakeFiles/2d_fighting_test.dir/build
 .PHONY : 2d_fighting_test/fast
-
-#=============================================================================
-# Target rules for targets named Catch2
-
-# Build rule for target.
-Catch2: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Catch2
-.PHONY : Catch2
-
-# fast build rule for target.
-Catch2/fast:
-	$(MAKE) $(MAKESILENT) -f _deps/catch2-build/src/CMakeFiles/Catch2.dir/build.make _deps/catch2-build/src/CMakeFiles/Catch2.dir/build
-.PHONY : Catch2/fast
-
-#=============================================================================
-# Target rules for targets named Catch2WithMain
-
-# Build rule for target.
-Catch2WithMain: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Catch2WithMain
-.PHONY : Catch2WithMain
-
-# fast build rule for target.
-Catch2WithMain/fast:
-	$(MAKE) $(MAKESILENT) -f _deps/catch2-build/src/CMakeFiles/Catch2WithMain.dir/build.make _deps/catch2-build/src/CMakeFiles/Catch2WithMain.dir/build
-.PHONY : Catch2WithMain/fast
 
 src/collision.o: src/collision.cpp.o
 .PHONY : src/collision.o
@@ -380,6 +354,30 @@ src/entity.s: src/entity.cpp.s
 src/entity.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/entity.dir/build.make CMakeFiles/entity.dir/src/entity.cpp.s
 .PHONY : src/entity.cpp.s
+
+src/game.o: src/game.cpp.o
+.PHONY : src/game.o
+
+# target to build an object file
+src/game.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/src/game.cpp.o
+.PHONY : src/game.cpp.o
+
+src/game.i: src/game.cpp.i
+.PHONY : src/game.i
+
+# target to preprocess a source file
+src/game.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/src/game.cpp.i
+.PHONY : src/game.cpp.i
+
+src/game.s: src/game.cpp.s
+.PHONY : src/game.s
+
+# target to generate assembly for a file
+src/game.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/src/game.cpp.s
+.PHONY : src/game.cpp.s
 
 src/game_util.o: src/game_util.cpp.o
 .PHONY : src/game_util.o
@@ -525,30 +523,6 @@ src/static_object.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/static_object.dir/build.make CMakeFiles/static_object.dir/src/static_object.cpp.s
 .PHONY : src/static_object.cpp.s
 
-test/test.o: test/test.cpp.o
-.PHONY : test/test.o
-
-# target to build an object file
-test/test.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/tests.dir/build.make CMakeFiles/tests.dir/test/test.cpp.o
-.PHONY : test/test.cpp.o
-
-test/test.i: test/test.cpp.i
-.PHONY : test/test.i
-
-# target to preprocess a source file
-test/test.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/tests.dir/build.make CMakeFiles/tests.dir/test/test.cpp.i
-.PHONY : test/test.cpp.i
-
-test/test.s: test/test.cpp.s
-.PHONY : test/test.s
-
-# target to generate assembly for a file
-test/test.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/tests.dir/build.make CMakeFiles/tests.dir/test/test.cpp.s
-.PHONY : test/test.cpp.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -558,18 +532,16 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... 2d_fighting_test"
-	@echo "... Catch2"
-	@echo "... Catch2WithMain"
 	@echo "... collision"
 	@echo "... collisions_util"
 	@echo "... dynamic_object"
 	@echo "... entity"
+	@echo "... game"
 	@echo "... game_util"
 	@echo "... handle_global_collisions"
 	@echo "... player"
 	@echo "... spatial_hash_grid"
 	@echo "... static_object"
-	@echo "... tests"
 	@echo "... src/collision.o"
 	@echo "... src/collision.i"
 	@echo "... src/collision.s"
@@ -582,6 +554,9 @@ help:
 	@echo "... src/entity.o"
 	@echo "... src/entity.i"
 	@echo "... src/entity.s"
+	@echo "... src/game.o"
+	@echo "... src/game.i"
+	@echo "... src/game.s"
 	@echo "... src/game_util.o"
 	@echo "... src/game_util.i"
 	@echo "... src/game_util.s"
@@ -600,9 +575,6 @@ help:
 	@echo "... src/static_object.o"
 	@echo "... src/static_object.i"
 	@echo "... src/static_object.s"
-	@echo "... test/test.o"
-	@echo "... test/test.i"
-	@echo "... test/test.s"
 .PHONY : help
 
 

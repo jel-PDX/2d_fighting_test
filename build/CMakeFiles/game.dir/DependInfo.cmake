@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/james/Desktop/Programming/2d_fighting_test/src/static_object.cpp" "CMakeFiles/static_object.dir/src/static_object.cpp.o" "gcc" "CMakeFiles/static_object.dir/src/static_object.cpp.o.d"
+  "/home/james/Desktop/Programming/2d_fighting_test/src/game.cpp" "CMakeFiles/game.dir/src/game.cpp.o" "gcc" "CMakeFiles/game.dir/src/game.cpp.o.d"
   )
 
 # Targets to which this target links.

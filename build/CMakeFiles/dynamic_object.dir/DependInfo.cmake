@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/james/projects/2d_fighting_test/src/dynamic_object.cpp" "CMakeFiles/dynamic_object.dir/src/dynamic_object.cpp.o" "gcc" "CMakeFiles/dynamic_object.dir/src/dynamic_object.cpp.o.d"
+  "/home/james/Desktop/Programming/2d_fighting_test/src/dynamic_object.cpp" "CMakeFiles/dynamic_object.dir/src/dynamic_object.cpp.o" "gcc" "CMakeFiles/dynamic_object.dir/src/dynamic_object.cpp.o.d"
   )
 
 # Targets to which this target links.

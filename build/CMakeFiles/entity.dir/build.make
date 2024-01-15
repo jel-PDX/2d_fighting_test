@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/james/projects/2d_fighting_test
+CMAKE_SOURCE_DIR = /home/james/Desktop/Programming/2d_fighting_test
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/james/projects/2d_fighting_test/build
+CMAKE_BINARY_DIR = /home/james/Desktop/Programming/2d_fighting_test/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/entity.dir/depend.make
@@ -72,16 +72,16 @@ include CMakeFiles/entity.dir/flags.make
 CMakeFiles/entity.dir/src/entity.cpp.o: CMakeFiles/entity.dir/flags.make
 CMakeFiles/entity.dir/src/entity.cpp.o: ../src/entity.cpp
 CMakeFiles/entity.dir/src/entity.cpp.o: CMakeFiles/entity.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/james/projects/2d_fighting_test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/entity.dir/src/entity.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/entity.dir/src/entity.cpp.o -MF CMakeFiles/entity.dir/src/entity.cpp.o.d -o CMakeFiles/entity.dir/src/entity.cpp.o -c /home/james/projects/2d_fighting_test/src/entity.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/james/Desktop/Programming/2d_fighting_test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/entity.dir/src/entity.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/entity.dir/src/entity.cpp.o -MF CMakeFiles/entity.dir/src/entity.cpp.o.d -o CMakeFiles/entity.dir/src/entity.cpp.o -c /home/james/Desktop/Programming/2d_fighting_test/src/entity.cpp
 
 CMakeFiles/entity.dir/src/entity.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/entity.dir/src/entity.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/james/projects/2d_fighting_test/src/entity.cpp > CMakeFiles/entity.dir/src/entity.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/james/Desktop/Programming/2d_fighting_test/src/entity.cpp > CMakeFiles/entity.dir/src/entity.cpp.i
 
 CMakeFiles/entity.dir/src/entity.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/entity.dir/src/entity.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/james/projects/2d_fighting_test/src/entity.cpp -o CMakeFiles/entity.dir/src/entity.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/james/Desktop/Programming/2d_fighting_test/src/entity.cpp -o CMakeFiles/entity.dir/src/entity.cpp.s
 
 # Object files for target entity
 entity_OBJECTS = \
@@ -93,7 +93,7 @@ entity_EXTERNAL_OBJECTS =
 libentity.a: CMakeFiles/entity.dir/src/entity.cpp.o
 libentity.a: CMakeFiles/entity.dir/build.make
 libentity.a: CMakeFiles/entity.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/james/projects/2d_fighting_test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library libentity.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/james/Desktop/Programming/2d_fighting_test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library libentity.a"
 	$(CMAKE_COMMAND) -P CMakeFiles/entity.dir/cmake_clean_target.cmake
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/entity.dir/link.txt --verbose=$(VERBOSE)
 
@@ -106,6 +106,6 @@ CMakeFiles/entity.dir/clean:
 .PHONY : CMakeFiles/entity.dir/clean
 
 CMakeFiles/entity.dir/depend:
-	cd /home/james/projects/2d_fighting_test/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/james/projects/2d_fighting_test /home/james/projects/2d_fighting_test /home/james/projects/2d_fighting_test/build /home/james/projects/2d_fighting_test/build /home/james/projects/2d_fighting_test/build/CMakeFiles/entity.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/james/Desktop/Programming/2d_fighting_test/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/james/Desktop/Programming/2d_fighting_test /home/james/Desktop/Programming/2d_fighting_test /home/james/Desktop/Programming/2d_fighting_test/build /home/james/Desktop/Programming/2d_fighting_test/build /home/james/Desktop/Programming/2d_fighting_test/build/CMakeFiles/entity.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/entity.dir/depend
 

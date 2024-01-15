@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/james/projects/2d_fighting_test
+CMAKE_SOURCE_DIR = /home/james/Desktop/Programming/2d_fighting_test
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/james/projects/2d_fighting_test/build
+CMAKE_BINARY_DIR = /home/james/Desktop/Programming/2d_fighting_test/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/handle_global_collisions.dir/depend.make
@@ -72,16 +72,16 @@ include CMakeFiles/handle_global_collisions.dir/flags.make
 CMakeFiles/handle_global_collisions.dir/src/handle_global_collisions.cpp.o: CMakeFiles/handle_global_collisions.dir/flags.make
 CMakeFiles/handle_global_collisions.dir/src/handle_global_collisions.cpp.o: ../src/handle_global_collisions.cpp
 CMakeFiles/handle_global_collisions.dir/src/handle_global_collisions.cpp.o: CMakeFiles/handle_global_collisions.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/james/projects/2d_fighting_test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/handle_global_collisions.dir/src/handle_global_collisions.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/handle_global_collisions.dir/src/handle_global_collisions.cpp.o -MF CMakeFiles/handle_global_collisions.dir/src/handle_global_collisions.cpp.o.d -o CMakeFiles/handle_global_collisions.dir/src/handle_global_collisions.cpp.o -c /home/james/projects/2d_fighting_test/src/handle_global_collisions.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/james/Desktop/Programming/2d_fighting_test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/handle_global_collisions.dir/src/handle_global_collisions.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/handle_global_collisions.dir/src/handle_global_collisions.cpp.o -MF CMakeFiles/handle_global_collisions.dir/src/handle_global_collisions.cpp.o.d -o CMakeFiles/handle_global_collisions.dir/src/handle_global_collisions.cpp.o -c /home/james/Desktop/Programming/2d_fighting_test/src/handle_global_collisions.cpp
 
 CMakeFiles/handle_global_collisions.dir/src/handle_global_collisions.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/handle_global_collisions.dir/src/handle_global_collisions.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/james/projects/2d_fighting_test/src/handle_global_collisions.cpp > CMakeFiles/handle_global_collisions.dir/src/handle_global_collisions.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/james/Desktop/Programming/2d_fighting_test/src/handle_global_collisions.cpp > CMakeFiles/handle_global_collisions.dir/src/handle_global_collisions.cpp.i
 
 CMakeFiles/handle_global_collisions.dir/src/handle_global_collisions.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/handle_global_collisions.dir/src/handle_global_collisions.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/james/projects/2d_fighting_test/src/handle_global_collisions.cpp -o CMakeFiles/handle_global_collisions.dir/src/handle_global_collisions.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/james/Desktop/Programming/2d_fighting_test/src/handle_global_collisions.cpp -o CMakeFiles/handle_global_collisions.dir/src/handle_global_collisions.cpp.s
 
 # Object files for target handle_global_collisions
 handle_global_collisions_OBJECTS = \
@@ -93,7 +93,7 @@ handle_global_collisions_EXTERNAL_OBJECTS =
 libhandle_global_collisions.a: CMakeFiles/handle_global_collisions.dir/src/handle_global_collisions.cpp.o
 libhandle_global_collisions.a: CMakeFiles/handle_global_collisions.dir/build.make
 libhandle_global_collisions.a: CMakeFiles/handle_global_collisions.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/james/projects/2d_fighting_test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library libhandle_global_collisions.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/james/Desktop/Programming/2d_fighting_test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library libhandle_global_collisions.a"
 	$(CMAKE_COMMAND) -P CMakeFiles/handle_global_collisions.dir/cmake_clean_target.cmake
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/handle_global_collisions.dir/link.txt --verbose=$(VERBOSE)
 
@@ -106,6 +106,6 @@ CMakeFiles/handle_global_collisions.dir/clean:
 .PHONY : CMakeFiles/handle_global_collisions.dir/clean
 
 CMakeFiles/handle_global_collisions.dir/depend:
-	cd /home/james/projects/2d_fighting_test/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/james/projects/2d_fighting_test /home/james/projects/2d_fighting_test /home/james/projects/2d_fighting_test/build /home/james/projects/2d_fighting_test/build /home/james/projects/2d_fighting_test/build/CMakeFiles/handle_global_collisions.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/james/Desktop/Programming/2d_fighting_test/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/james/Desktop/Programming/2d_fighting_test /home/james/Desktop/Programming/2d_fighting_test /home/james/Desktop/Programming/2d_fighting_test/build /home/james/Desktop/Programming/2d_fighting_test/build /home/james/Desktop/Programming/2d_fighting_test/build/CMakeFiles/handle_global_collisions.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/handle_global_collisions.dir/depend
 

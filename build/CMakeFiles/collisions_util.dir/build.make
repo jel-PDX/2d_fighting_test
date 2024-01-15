@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/james/projects/2d_fighting_test
+CMAKE_SOURCE_DIR = /home/james/Desktop/Programming/2d_fighting_test
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/james/projects/2d_fighting_test/build
+CMAKE_BINARY_DIR = /home/james/Desktop/Programming/2d_fighting_test/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/collisions_util.dir/depend.make
@@ -72,16 +72,16 @@ include CMakeFiles/collisions_util.dir/flags.make
 CMakeFiles/collisions_util.dir/src/collisions_util.cpp.o: CMakeFiles/collisions_util.dir/flags.make
 CMakeFiles/collisions_util.dir/src/collisions_util.cpp.o: ../src/collisions_util.cpp
 CMakeFiles/collisions_util.dir/src/collisions_util.cpp.o: CMakeFiles/collisions_util.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/james/projects/2d_fighting_test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/collisions_util.dir/src/collisions_util.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/collisions_util.dir/src/collisions_util.cpp.o -MF CMakeFiles/collisions_util.dir/src/collisions_util.cpp.o.d -o CMakeFiles/collisions_util.dir/src/collisions_util.cpp.o -c /home/james/projects/2d_fighting_test/src/collisions_util.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/james/Desktop/Programming/2d_fighting_test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/collisions_util.dir/src/collisions_util.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/collisions_util.dir/src/collisions_util.cpp.o -MF CMakeFiles/collisions_util.dir/src/collisions_util.cpp.o.d -o CMakeFiles/collisions_util.dir/src/collisions_util.cpp.o -c /home/james/Desktop/Programming/2d_fighting_test/src/collisions_util.cpp
 
 CMakeFiles/collisions_util.dir/src/collisions_util.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/collisions_util.dir/src/collisions_util.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/james/projects/2d_fighting_test/src/collisions_util.cpp > CMakeFiles/collisions_util.dir/src/collisions_util.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/james/Desktop/Programming/2d_fighting_test/src/collisions_util.cpp > CMakeFiles/collisions_util.dir/src/collisions_util.cpp.i
 
 CMakeFiles/collisions_util.dir/src/collisions_util.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/collisions_util.dir/src/collisions_util.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/james/projects/2d_fighting_test/src/collisions_util.cpp -o CMakeFiles/collisions_util.dir/src/collisions_util.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/james/Desktop/Programming/2d_fighting_test/src/collisions_util.cpp -o CMakeFiles/collisions_util.dir/src/collisions_util.cpp.s
 
 # Object files for target collisions_util
 collisions_util_OBJECTS = \
@@ -93,7 +93,7 @@ collisions_util_EXTERNAL_OBJECTS =
 libcollisions_util.a: CMakeFiles/collisions_util.dir/src/collisions_util.cpp.o
 libcollisions_util.a: CMakeFiles/collisions_util.dir/build.make
 libcollisions_util.a: CMakeFiles/collisions_util.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/james/projects/2d_fighting_test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library libcollisions_util.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/james/Desktop/Programming/2d_fighting_test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library libcollisions_util.a"
 	$(CMAKE_COMMAND) -P CMakeFiles/collisions_util.dir/cmake_clean_target.cmake
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/collisions_util.dir/link.txt --verbose=$(VERBOSE)
 
@@ -106,6 +106,6 @@ CMakeFiles/collisions_util.dir/clean:
 .PHONY : CMakeFiles/collisions_util.dir/clean
 
 CMakeFiles/collisions_util.dir/depend:
-	cd /home/james/projects/2d_fighting_test/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/james/projects/2d_fighting_test /home/james/projects/2d_fighting_test /home/james/projects/2d_fighting_test/build /home/james/projects/2d_fighting_test/build /home/james/projects/2d_fighting_test/build/CMakeFiles/collisions_util.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/james/Desktop/Programming/2d_fighting_test/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/james/Desktop/Programming/2d_fighting_test /home/james/Desktop/Programming/2d_fighting_test /home/james/Desktop/Programming/2d_fighting_test/build /home/james/Desktop/Programming/2d_fighting_test/build /home/james/Desktop/Programming/2d_fighting_test/build/CMakeFiles/collisions_util.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/collisions_util.dir/depend
 

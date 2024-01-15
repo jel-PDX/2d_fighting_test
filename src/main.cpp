@@ -7,6 +7,7 @@
 #include "collisions_util.h"
 #include "dynamic_object.h"
 #include "entity.h"
+#include "game.h"
 #include "game_util.h"
 #include "handle_global_collisions.h"
 #include "player.h"
@@ -18,8 +19,9 @@ int main() {
   window.setPosition({400, 100});
   window.setFramerateLimit(60);
 
-  Player player{"../assets/player.png"};
-  player.setPos(20, 300);
+  Game game{};
+
+  game.addEntity("../assets/player.png", {20, 300}, 'p');
 
   DynamicObject box1{"../assets/small_box.png"};
   box1.setPos(500, 300);
@@ -39,7 +41,6 @@ int main() {
   StaticObject ground{"../assets/ground.png"};
   ground.setPos(0, 700);
 
-  game_entities.push_back(&player);
   game_entities.push_back(&box1);
   game_entities.push_back(&box2);
   game_entities.push_back(&box3);
@@ -47,7 +48,6 @@ int main() {
   game_entities.push_back(&box5);
   game_entities.push_back(&ground);
 
-  SHG.insertEntity(&player);
   SHG.insertEntity(&box1);
   SHG.insertEntity(&box2);
   SHG.insertEntity(&box3);
@@ -108,14 +108,14 @@ int main() {
 
     // State Handling
     if (A_PRESSED) {
-      player.setMoveDir(Player::LEFT);
+      game.g_player->setMoveDir(Player::LEFT);
     } else if (D_PRESSED) {
-      player.setMoveDir(Player::RIGHT);
+      game.g_player->setMoveDir(Player::RIGHT);
     } else
-      player.setMoveDir(Player::HALT);
+      game.g_player->setMoveDir(Player::HALT);
 
-    if (SPACE_PRESSED && player.getJump() == Player::NO_JUMP)
-      player.setJump(Player::JUMP);
+    if (SPACE_PRESSED && game.g_player->getJump() == Player::NO_JUMP)
+      game.g_player->setJump(Player::JUMP);
 
     // Update Entities
     for (Entity* e : game_entities) e->update();
@@ -137,23 +137,11 @@ int main() {
     }
     world_nudges.clear();
 
-    SHG.updateEntity(&player);
-    SHG.updateEntity(&box1);
-    SHG.updateEntity(&box2);
-    SHG.updateEntity(&box3);
-    SHG.updateEntity(&box4);
-    SHG.updateEntity(&box5);
-    SHG.updateEntity(&ground);
+    for (Entity* e : game_entities) SHG.updateEntity(e);
 
     // Rendering
     window.clear();
-    window.draw(box1.getSpr());
-    window.draw(box2.getSpr());
-    window.draw(box3.getSpr());
-    window.draw(box4.getSpr());
-    window.draw(box5.getSpr());
-    window.draw(ground.getSpr());
-    window.draw(player.getSpr());
+    for (Entity* e : game_entities) window.draw(e->getSpr());
     window.display();
   }
 }

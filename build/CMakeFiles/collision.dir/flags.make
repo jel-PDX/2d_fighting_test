@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/james/projects/2d_fighting_test/src/include
+CXX_INCLUDES = -I/home/james/Desktop/Programming/2d_fighting_test/src/include
 
 CXX_FLAGS = 
 

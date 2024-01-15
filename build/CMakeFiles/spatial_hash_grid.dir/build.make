@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/james/projects/2d_fighting_test
+CMAKE_SOURCE_DIR = /home/james/Desktop/Programming/2d_fighting_test
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/james/projects/2d_fighting_test/build
+CMAKE_BINARY_DIR = /home/james/Desktop/Programming/2d_fighting_test/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/spatial_hash_grid.dir/depend.make
@@ -72,16 +72,16 @@ include CMakeFiles/spatial_hash_grid.dir/flags.make
 CMakeFiles/spatial_hash_grid.dir/src/spatial_hash_grid.cpp.o: CMakeFiles/spatial_hash_grid.dir/flags.make
 CMakeFiles/spatial_hash_grid.dir/src/spatial_hash_grid.cpp.o: ../src/spatial_hash_grid.cpp
 CMakeFiles/spatial_hash_grid.dir/src/spatial_hash_grid.cpp.o: CMakeFiles/spatial_hash_grid.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/james/projects/2d_fighting_test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/spatial_hash_grid.dir/src/spatial_hash_grid.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/spatial_hash_grid.dir/src/spatial_hash_grid.cpp.o -MF CMakeFiles/spatial_hash_grid.dir/src/spatial_hash_grid.cpp.o.d -o CMakeFiles/spatial_hash_grid.dir/src/spatial_hash_grid.cpp.o -c /home/james/projects/2d_fighting_test/src/spatial_hash_grid.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/james/Desktop/Programming/2d_fighting_test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/spatial_hash_grid.dir/src/spatial_hash_grid.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/spatial_hash_grid.dir/src/spatial_hash_grid.cpp.o -MF CMakeFiles/spatial_hash_grid.dir/src/spatial_hash_grid.cpp.o.d -o CMakeFiles/spatial_hash_grid.dir/src/spatial_hash_grid.cpp.o -c /home/james/Desktop/Programming/2d_fighting_test/src/spatial_hash_grid.cpp
 
 CMakeFiles/spatial_hash_grid.dir/src/spatial_hash_grid.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/spatial_hash_grid.dir/src/spatial_hash_grid.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/james/projects/2d_fighting_test/src/spatial_hash_grid.cpp > CMakeFiles/spatial_hash_grid.dir/src/spatial_hash_grid.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/james/Desktop/Programming/2d_fighting_test/src/spatial_hash_grid.cpp > CMakeFiles/spatial_hash_grid.dir/src/spatial_hash_grid.cpp.i
 
 CMakeFiles/spatial_hash_grid.dir/src/spatial_hash_grid.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/spatial_hash_grid.dir/src/spatial_hash_grid.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/james/projects/2d_fighting_test/src/spatial_hash_grid.cpp -o CMakeFiles/spatial_hash_grid.dir/src/spatial_hash_grid.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/james/Desktop/Programming/2d_fighting_test/src/spatial_hash_grid.cpp -o CMakeFiles/spatial_hash_grid.dir/src/spatial_hash_grid.cpp.s
 
 # Object files for target spatial_hash_grid
 spatial_hash_grid_OBJECTS = \
@@ -93,7 +93,7 @@ spatial_hash_grid_EXTERNAL_OBJECTS =
 libspatial_hash_grid.a: CMakeFiles/spatial_hash_grid.dir/src/spatial_hash_grid.cpp.o
 libspatial_hash_grid.a: CMakeFiles/spatial_hash_grid.dir/build.make
 libspatial_hash_grid.a: CMakeFiles/spatial_hash_grid.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/james/projects/2d_fighting_test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library libspatial_hash_grid.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/james/Desktop/Programming/2d_fighting_test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library libspatial_hash_grid.a"
 	$(CMAKE_COMMAND) -P CMakeFiles/spatial_hash_grid.dir/cmake_clean_target.cmake
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/spatial_hash_grid.dir/link.txt --verbose=$(VERBOSE)
 
@@ -106,6 +106,6 @@ CMakeFiles/spatial_hash_grid.dir/clean:
 .PHONY : CMakeFiles/spatial_hash_grid.dir/clean
 
 CMakeFiles/spatial_hash_grid.dir/depend:
-	cd /home/james/projects/2d_fighting_test/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/james/projects/2d_fighting_test /home/james/projects/2d_fighting_test /home/james/projects/2d_fighting_test/build /home/james/projects/2d_fighting_test/build /home/james/projects/2d_fighting_test/build/CMakeFiles/spatial_hash_grid.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/james/Desktop/Programming/2d_fighting_test/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/james/Desktop/Programming/2d_fighting_test /home/james/Desktop/Programming/2d_fighting_test /home/james/Desktop/Programming/2d_fighting_test/build /home/james/Desktop/Programming/2d_fighting_test/build /home/james/Desktop/Programming/2d_fighting_test/build/CMakeFiles/spatial_hash_grid.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/spatial_hash_grid.dir/depend
 

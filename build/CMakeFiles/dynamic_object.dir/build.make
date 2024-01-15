@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/james/projects/2d_fighting_test
+CMAKE_SOURCE_DIR = /home/james/Desktop/Programming/2d_fighting_test
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/james/projects/2d_fighting_test/build
+CMAKE_BINARY_DIR = /home/james/Desktop/Programming/2d_fighting_test/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/dynamic_object.dir/depend.make
@@ -72,16 +72,16 @@ include CMakeFiles/dynamic_object.dir/flags.make
 CMakeFiles/dynamic_object.dir/src/dynamic_object.cpp.o: CMakeFiles/dynamic_object.dir/flags.make
 CMakeFiles/dynamic_object.dir/src/dynamic_object.cpp.o: ../src/dynamic_object.cpp
 CMakeFiles/dynamic_object.dir/src/dynamic_object.cpp.o: CMakeFiles/dynamic_object.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/james/projects/2d_fighting_test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/dynamic_object.dir/src/dynamic_object.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/dynamic_object.dir/src/dynamic_object.cpp.o -MF CMakeFiles/dynamic_object.dir/src/dynamic_object.cpp.o.d -o CMakeFiles/dynamic_object.dir/src/dynamic_object.cpp.o -c /home/james/projects/2d_fighting_test/src/dynamic_object.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/james/Desktop/Programming/2d_fighting_test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/dynamic_object.dir/src/dynamic_object.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/dynamic_object.dir/src/dynamic_object.cpp.o -MF CMakeFiles/dynamic_object.dir/src/dynamic_object.cpp.o.d -o CMakeFiles/dynamic_object.dir/src/dynamic_object.cpp.o -c /home/james/Desktop/Programming/2d_fighting_test/src/dynamic_object.cpp
 
 CMakeFiles/dynamic_object.dir/src/dynamic_object.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/dynamic_object.dir/src/dynamic_object.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/james/projects/2d_fighting_test/src/dynamic_object.cpp > CMakeFiles/dynamic_object.dir/src/dynamic_object.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/james/Desktop/Programming/2d_fighting_test/src/dynamic_object.cpp > CMakeFiles/dynamic_object.dir/src/dynamic_object.cpp.i
 
 CMakeFiles/dynamic_object.dir/src/dynamic_object.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/dynamic_object.dir/src/dynamic_object.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/james/projects/2d_fighting_test/src/dynamic_object.cpp -o CMakeFiles/dynamic_object.dir/src/dynamic_object.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/james/Desktop/Programming/2d_fighting_test/src/dynamic_object.cpp -o CMakeFiles/dynamic_object.dir/src/dynamic_object.cpp.s
 
 # Object files for target dynamic_object
 dynamic_object_OBJECTS = \
@@ -93,7 +93,7 @@ dynamic_object_EXTERNAL_OBJECTS =
 libdynamic_object.a: CMakeFiles/dynamic_object.dir/src/dynamic_object.cpp.o
 libdynamic_object.a: CMakeFiles/dynamic_object.dir/build.make
 libdynamic_object.a: CMakeFiles/dynamic_object.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/james/projects/2d_fighting_test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library libdynamic_object.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/james/Desktop/Programming/2d_fighting_test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library libdynamic_object.a"
 	$(CMAKE_COMMAND) -P CMakeFiles/dynamic_object.dir/cmake_clean_target.cmake
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/dynamic_object.dir/link.txt --verbose=$(VERBOSE)
 
@@ -106,6 +106,6 @@ CMakeFiles/dynamic_object.dir/clean:
 .PHONY : CMakeFiles/dynamic_object.dir/clean
 
 CMakeFiles/dynamic_object.dir/depend:
-	cd /home/james/projects/2d_fighting_test/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/james/projects/2d_fighting_test /home/james/projects/2d_fighting_test /home/james/projects/2d_fighting_test/build /home/james/projects/2d_fighting_test/build /home/james/projects/2d_fighting_test/build/CMakeFiles/dynamic_object.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/james/Desktop/Programming/2d_fighting_test/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/james/Desktop/Programming/2d_fighting_test /home/james/Desktop/Programming/2d_fighting_test /home/james/Desktop/Programming/2d_fighting_test/build /home/james/Desktop/Programming/2d_fighting_test/build /home/james/Desktop/Programming/2d_fighting_test/build/CMakeFiles/dynamic_object.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/dynamic_object.dir/depend
 
