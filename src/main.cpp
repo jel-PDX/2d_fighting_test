@@ -22,38 +22,12 @@ int main() {
   Game game{};
 
   game.addEntity("../assets/player.png", {20, 300}, 'p');
-
-  DynamicObject box1{"../assets/small_box.png"};
-  box1.setPos(500, 300);
-
-  DynamicObject box2{"../assets/small_box.png"};
-  box2.setPos(500, 200);
-
-  StaticObject box3{"../assets/big_box.png"};
-  box3.setPos(750, 572);
-
-  StaticObject box4{"../assets/big_box.png"};
-  box4.setPos(750, 265);
-
-  DynamicObject box5{"../assets/small_box.png"};
-  box5.setPos(300, 300);
-
-  StaticObject ground{"../assets/ground.png"};
-  ground.setPos(0, 700);
-
-  game_entities.push_back(&box1);
-  game_entities.push_back(&box2);
-  game_entities.push_back(&box3);
-  game_entities.push_back(&box4);
-  game_entities.push_back(&box5);
-  game_entities.push_back(&ground);
-
-  SHG.insertEntity(&box1);
-  SHG.insertEntity(&box2);
-  SHG.insertEntity(&box3);
-  SHG.insertEntity(&box4);
-  SHG.insertEntity(&box5);
-  SHG.insertEntity(&ground);
+  game.addEntity("../assets/small_box.png", {500, 300}, 'd');
+  game.addEntity("../assets/small_box.png", {500, 200}, 'd');
+  game.addEntity("../assets/big_box.png", {750, 572}, 's');
+  game.addEntity("../assets/big_box.png", {750, 265}, 's');
+  game.addEntity("../assets/small_box.png", {300, 300}, 'd');
+  game.addEntity("../assets/ground.png", {0, 700}, 's');
 
   bool W_PRESSED{}, A_PRESSED{}, S_PRESSED{}, D_PRESSED{}, SPACE_PRESSED{};
 

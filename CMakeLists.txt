@@ -51,4 +51,4 @@ add_executable(${PROJECT_NAME} src/main.cpp)
 
 target_include_directories(${PROJECT_NAME} PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/src/include)
 
-target_link_libraries(${PROJECT_NAME} spatial_hash_grid game_util handle_global_collisions collision collisions_util entity player static_object dynamic_object game sfml-graphics sfml-window sfml-audio sfml-system)
+target_link_libraries(${PROJECT_NAME} spatial_hash_grid game_util handle_global_collisions collision collisions_util entity game player static_object dynamic_object sfml-graphics sfml-window sfml-audio sfml-system)
