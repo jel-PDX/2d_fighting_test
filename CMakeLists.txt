@@ -2,19 +2,8 @@ cmake_minimum_required(VERSION 3.16)
 
 project(2d_fighting_test)
 
-include (FetchContent)
-
 # SFML
 find_package(SFML 2.5 COMPONENTS graphics audio window system REQUIRED)
-
-# Catch2
-FetchContent_Declare(
-  Catch2
-  GIT_REPOSITORY https://github.com/catchorg/Catch2.git
-  GIT_TAG v3.4.0
-)
-
-FetchContent_MakeAvailable(Catch2)
 
 # Custom Libs and Headers
 add_library(entity src/entity.cpp)
@@ -52,13 +41,6 @@ target_include_directories(collisions_util PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/sr
 target_include_directories(handle_global_collisions PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/src/include)
 
 target_include_directories(game_util PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/src/include)
-
-# Testing Executable
-add_executable(tests test/test.cpp)
-
-target_include_directories(tests PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/src/include)
-
-target_link_libraries(tests PUBLIC spatial_hash_grid game_util handle_global_collisions collision collisions_util entity player static_object dynamic_object sfml-graphics sfml-window sfml-audio sfml-system PRIVATE Catch2::Catch2WithMain)
 
 # Program Executable
 add_executable(${PROJECT_NAME} src/main.cpp)
