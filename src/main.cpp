@@ -17,9 +17,6 @@
 
 int main() {
   // Setup
-  window.setPosition({400, 100});
-  window.setFramerateLimit(60);
-
   FT game{};
   game.addScene("1");
 
@@ -34,12 +31,12 @@ int main() {
   bool W_PRESSED{}, A_PRESSED{}, S_PRESSED{}, D_PRESSED{}, SPACE_PRESSED{};
 
   // Application Loop
-  while (window.isOpen()) {
+  while (game.getWindow()->isOpen()) {
     sf::Event event;
 
     // Event Loop
-    while (window.pollEvent(event)) {
-      if (event.type == sf::Event::Closed) window.close();
+    while (game.getWindow()->pollEvent(event)) {
+      if (event.type == sf::Event::Closed) game.getWindow()->close();
 
       if (event.key.code == sf::Keyboard::W) {
         if (event.type == sf::Event::KeyPressed) {
@@ -117,8 +114,6 @@ int main() {
     for (Entity* e : game_entities) SHG.updateEntity(e);
 
     // Rendering
-    window.clear();
-    for (Entity* e : game_entities) window.draw(e->getSpr());
-    window.display();
+    game.renderScene("1");
   }
 }
