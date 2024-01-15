@@ -1,0 +1,73 @@
+@startuml
+!theme reddress-darkblue
+
+abstract class Entity {
+  enum Weight { WEAK, MIDDLE, STRONG }
+  --
+  Weight e_weight_x
+  Weight e_weight_y
+  --
+  virtual void update()
+}
+
+Player <|-- Entity  
+
+note on link #blue: all inherit Entity
+
+DynamicObject <|-- Entity
+
+StaticObject <|-- Entity
+
+class Collision {
+  enum ColDir { X_COL, Y_COL }
+  --
+  Collision(Entity* e1, Entity* e2, ColDir col_dir)
+  resolve()
+  resolveImbalance(Entity::Weight w1, Entity::Weight w2)
+  resolveBalance(Entity::Weight w1, Entity Weight:: w2)
+}
+
+class SpatialHashGrid {
+  InsertEntity(Entity* e)
+  getCellIndex(sf::Vector2<float> pos)
+  getSurroundingCellIndices(sf::Vector2<int> cell_index)
+  findNear(Entity* e)
+  updateEntity(Entity* e)
+  removeEntity(Entity* e)
+}
+
+annotation "game_util (header file)" {
+  vector<Entity*> game_entities
+  unordered_map<size_t, Collision> world_collisions
+  unordered_map<size_t, sf::Vector2<float>> world_nudges
+  SpatialHashGrid{{WINDOW_WIDTH, WINDOW_HEIGHT}, {NUM_CELLS_WIDE, NUM_CELLS_HIGH}}
+}
+
+annotation "handle_global_collisions (header file)" {
+  handleGlobalCollisions()
+}
+
+annotation "collisions_util (header file)" {
+  isXCollision(e1, e2)
+  isYCollision(e1, e2)
+  checkCollisionDir(e1, e2)
+  generateCollision(e1, e2, col_dir)
+}
+
+annotation "MAIN FLOW" {
+setup:
+ 1. create entities, set their positions 
+ 2. push all entities onto game_entities 
+ 3. insert all entities onto spatial hash grid
+application loop:
+ 1. event loop:
+   1.1 poll for all inputs, set states accordingly
+ 2. state handling
+ 3. handle global collisions
+ 4. global entities movement 
+ 5. undo nudge velocities
+ 6. update all entities in spatial hash grid
+ 7. render all game entities
+}
+
+@enduml
