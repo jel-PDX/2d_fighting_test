@@ -14,14 +14,20 @@ sf::RenderWindow* FT::getWindow() { return &ft_window; }
 
 void FT::addScene(string id) { ft_scene_map[id] = new Scene(this); }
 
-Scene* FT::getScene(string id) { return ft_scene_map[id]; }
+void FT::selectScene(string id) { select_id = id; }
 
-void FT::updateScene(string id) { ft_scene_map[id]->update(); }
+void FT::addEntity(string txr_path, sf::Vector2<int> pos, char type) {
+  ft_scene_map[select_id]->addEntity(txr_path, pos, type);
+}
 
-void FT::handleColScene(string id) { ft_scene_map[id]->handleCollisions(); }
+void FT::updateScene() { ft_scene_map[select_id]->update(); }
 
-void FT::writeScene(string id) { ft_scene_map[id]->writeMovement(); }
+void FT::handleColScene() { ft_scene_map[select_id]->handleCollisions(); }
 
-void FT::renderScene(string id) { ft_scene_map[id]->render(); }
+void FT::writeScene() { ft_scene_map[select_id]->writeMovement(); }
 
-void FT::undoNudgesScene(string id) { ft_scene_map[id]->undoNudges(); }
+void FT::renderScene() { ft_scene_map[select_id]->render(); }
+
+void FT::undoNudgesScene() { ft_scene_map[select_id]->undoNudges(); }
+
+Player* FT::getPlayer() { return ft_scene_map[select_id]->s_player; }

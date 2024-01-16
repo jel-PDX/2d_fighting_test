@@ -19,14 +19,15 @@ int main() {
   // Setup
   FT game{};
   game.addScene("1");
+  game.selectScene("1");
 
-  game.getScene("1")->addEntity("../assets/player.png", {20, 300}, 'p');
-  game.getScene("1")->addEntity("../assets/small_box.png", {500, 300}, 'd');
-  game.getScene("1")->addEntity("../assets/small_box.png", {500, 200}, 'd');
-  game.getScene("1")->addEntity("../assets/big_box.png", {750, 572}, 's');
-  game.getScene("1")->addEntity("../assets/big_box.png", {750, 265}, 's');
-  game.getScene("1")->addEntity("../assets/small_box.png", {300, 300}, 'd');
-  game.getScene("1")->addEntity("../assets/ground.png", {0, 700}, 's');
+  game.addEntity("../assets/player.png", {20, 300}, 'p');
+  game.addEntity("../assets/small_box.png", {500, 300}, 'd');
+  game.addEntity("../assets/small_box.png", {500, 200}, 'd');
+  game.addEntity("../assets/big_box.png", {750, 572}, 's');
+  game.addEntity("../assets/big_box.png", {750, 265}, 's');
+  game.addEntity("../assets/small_box.png", {300, 300}, 'd');
+  game.addEntity("../assets/ground.png", {0, 700}, 's');
 
   bool W_PRESSED{}, A_PRESSED{}, S_PRESSED{}, D_PRESSED{}, SPACE_PRESSED{};
 
@@ -81,29 +82,28 @@ int main() {
 
     // State Handling
     if (A_PRESSED) {
-      game.getScene("1")->s_player->setMoveDir(Player::LEFT);
+      game.getPlayer()->setMoveDir(Player::LEFT);
     } else if (D_PRESSED) {
-      game.getScene("1")->s_player->setMoveDir(Player::RIGHT);
+      game.getPlayer()->setMoveDir(Player::RIGHT);
     } else
-      game.getScene("1")->s_player->setMoveDir(Player::HALT);
+      game.getPlayer()->setMoveDir(Player::HALT);
 
-    if (SPACE_PRESSED &&
-        game.getScene("1")->s_player->getJump() == Player::NO_JUMP)
-      game.getScene("1")->s_player->setJump(Player::JUMP);
+    if (SPACE_PRESSED && game.getPlayer()->getJump() == Player::NO_JUMP)
+      game.getPlayer()->setJump(Player::JUMP);
 
     // Update Entities
-    game.updateScene("1");
+    game.updateScene();
 
     // Handle Collisions
-    game.handleColScene("1");
+    game.handleColScene();
 
     // Global Entities Movement
-    game.writeScene("1");
+    game.writeScene();
 
     // Undo Nudge Velocities, Manage Gravity Accel
-    game.undoNudgesScene("1");
+    game.undoNudgesScene();
 
     // Rendering
-    game.renderScene("1");
+    game.renderScene();
   }
 }
