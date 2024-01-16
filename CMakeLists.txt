@@ -20,10 +20,6 @@ add_library(collision src/collision.cpp)
 
 add_library(collisions_util src/collisions_util.cpp)
 
-add_library(handle_global_collisions src/handle_global_collisions.cpp)
-
-add_library(game_util src/game_util.cpp)
-
 add_library(scene src/scene.cpp)
 
 add_library(ft src/ft.cpp)
@@ -42,10 +38,6 @@ target_include_directories(collision PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/src/incl
 
 target_include_directories(collisions_util PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/src/include)
 
-target_include_directories(handle_global_collisions PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/src/include)
-
-target_include_directories(game_util PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/src/include)
-
 target_include_directories(scene PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/src/include)
 
 target_include_directories(ft PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/src/include)
@@ -55,4 +47,4 @@ add_executable(${PROJECT_NAME} src/main.cpp)
 
 target_include_directories(${PROJECT_NAME} PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/src/include)
 
-target_link_libraries(${PROJECT_NAME} ft scene spatial_hash_grid game_util handle_global_collisions collision collisions_util entity player static_object dynamic_object sfml-graphics sfml-window sfml-audio sfml-system)
+target_link_libraries(${PROJECT_NAME} ft scene spatial_hash_grid collision collisions_util entity player static_object dynamic_object sfml-graphics sfml-window sfml-audio sfml-system)

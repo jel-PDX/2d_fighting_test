@@ -208,32 +208,6 @@ collisions_util/fast:
 .PHONY : collisions_util/fast
 
 #=============================================================================
-# Target rules for targets named handle_global_collisions
-
-# Build rule for target.
-handle_global_collisions: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 handle_global_collisions
-.PHONY : handle_global_collisions
-
-# fast build rule for target.
-handle_global_collisions/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/handle_global_collisions.dir/build.make CMakeFiles/handle_global_collisions.dir/build
-.PHONY : handle_global_collisions/fast
-
-#=============================================================================
-# Target rules for targets named game_util
-
-# Build rule for target.
-game_util: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 game_util
-.PHONY : game_util
-
-# fast build rule for target.
-game_util/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/game_util.dir/build.make CMakeFiles/game_util.dir/build
-.PHONY : game_util/fast
-
-#=============================================================================
 # Target rules for targets named scene
 
 # Build rule for target.
@@ -392,54 +366,6 @@ src/ft.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft.dir/build.make CMakeFiles/ft.dir/src/ft.cpp.s
 .PHONY : src/ft.cpp.s
 
-src/game_util.o: src/game_util.cpp.o
-.PHONY : src/game_util.o
-
-# target to build an object file
-src/game_util.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/game_util.dir/build.make CMakeFiles/game_util.dir/src/game_util.cpp.o
-.PHONY : src/game_util.cpp.o
-
-src/game_util.i: src/game_util.cpp.i
-.PHONY : src/game_util.i
-
-# target to preprocess a source file
-src/game_util.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/game_util.dir/build.make CMakeFiles/game_util.dir/src/game_util.cpp.i
-.PHONY : src/game_util.cpp.i
-
-src/game_util.s: src/game_util.cpp.s
-.PHONY : src/game_util.s
-
-# target to generate assembly for a file
-src/game_util.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/game_util.dir/build.make CMakeFiles/game_util.dir/src/game_util.cpp.s
-.PHONY : src/game_util.cpp.s
-
-src/handle_global_collisions.o: src/handle_global_collisions.cpp.o
-.PHONY : src/handle_global_collisions.o
-
-# target to build an object file
-src/handle_global_collisions.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/handle_global_collisions.dir/build.make CMakeFiles/handle_global_collisions.dir/src/handle_global_collisions.cpp.o
-.PHONY : src/handle_global_collisions.cpp.o
-
-src/handle_global_collisions.i: src/handle_global_collisions.cpp.i
-.PHONY : src/handle_global_collisions.i
-
-# target to preprocess a source file
-src/handle_global_collisions.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/handle_global_collisions.dir/build.make CMakeFiles/handle_global_collisions.dir/src/handle_global_collisions.cpp.i
-.PHONY : src/handle_global_collisions.cpp.i
-
-src/handle_global_collisions.s: src/handle_global_collisions.cpp.s
-.PHONY : src/handle_global_collisions.s
-
-# target to generate assembly for a file
-src/handle_global_collisions.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/handle_global_collisions.dir/build.make CMakeFiles/handle_global_collisions.dir/src/handle_global_collisions.cpp.s
-.PHONY : src/handle_global_collisions.cpp.s
-
 src/main.o: src/main.cpp.o
 .PHONY : src/main.o
 
@@ -574,8 +500,6 @@ help:
 	@echo "... dynamic_object"
 	@echo "... entity"
 	@echo "... ft"
-	@echo "... game_util"
-	@echo "... handle_global_collisions"
 	@echo "... player"
 	@echo "... scene"
 	@echo "... spatial_hash_grid"
@@ -595,12 +519,6 @@ help:
 	@echo "... src/ft.o"
 	@echo "... src/ft.i"
 	@echo "... src/ft.s"
-	@echo "... src/game_util.o"
-	@echo "... src/game_util.i"
-	@echo "... src/game_util.s"
-	@echo "... src/handle_global_collisions.o"
-	@echo "... src/handle_global_collisions.i"
-	@echo "... src/handle_global_collisions.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"

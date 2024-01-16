@@ -4,7 +4,6 @@
 #include <iostream>
 
 #include "entity.h"
-#include "game_util.h"
 
 sf::Vector2<float> Collision::nudge() {
   float x_nudge{}, y_nudge{};

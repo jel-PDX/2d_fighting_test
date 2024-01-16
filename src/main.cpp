@@ -8,8 +8,6 @@
 #include "dynamic_object.h"
 #include "entity.h"
 #include "ft.h"
-#include "game_util.h"
-#include "handle_global_collisions.h"
 #include "player.h"
 #include "scene.h"
 #include "spatial_hash_grid.h"

@@ -1,7 +1,6 @@
 #include "ft.h"
 
 #include "entity.h"
-#include "game_util.h"
 #include "scene.h"
 
 FT::FT() : ft_window_width{1280}, ft_window_height{720}, ft_scene_map{} {
