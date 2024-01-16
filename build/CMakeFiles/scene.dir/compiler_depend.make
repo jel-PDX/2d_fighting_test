@@ -299,19 +299,27 @@ CMakeFiles/scene.dir/src/scene.cpp.o: ../src/scene.cpp \
   /usr/include/SFML/Graphics/Sprite.hpp \
   /usr/include/SFML/Graphics/Text.hpp \
   /usr/include/SFML/Graphics/VertexBuffer.hpp \
-  ../src/include/dynamic_object.h \
+  ../src/include/collision.h \
   ../src/include/entity.h \
-  ../src/include/game_util.h \
-  ../src/include/player.h \
   ../src/include/spatial_hash_grid.h \
+  ../src/include/collisions_util.h \
+  ../src/include/dynamic_object.h \
+  ../src/include/ft.h \
+  ../src/include/player.h \
   ../src/include/static_object.h
 
+
+../src/include/ft.h:
+
+../src/include/dynamic_object.h:
+
+../src/include/collisions_util.h:
 
 ../src/include/spatial_hash_grid.h:
 
 ../src/include/entity.h:
 
-../src/include/dynamic_object.h:
+../src/include/collision.h:
 
 /usr/include/SFML/Graphics/VertexBuffer.hpp:
 
@@ -706,8 +714,6 @@ CMakeFiles/scene.dir/src/scene.cpp.o: ../src/scene.cpp \
 /usr/include/c++/11/iosfwd:
 
 /usr/include/c++/11/initializer_list:
-
-../src/include/game_util.h:
 
 /usr/include/stdc-predef.h:
 

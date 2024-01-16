@@ -5,7 +5,6 @@ CMakeFiles/collision.dir/src/collision.cpp.o
  /home/james/Desktop/Programming/2d_fighting_test/src/collision.cpp
  /usr/include/stdc-predef.h
  /home/james/Desktop/Programming/2d_fighting_test/src/include/collision.h
- /home/james/Desktop/Programming/2d_fighting_test/src/include/entity.h
  /usr/include/SFML/Graphics.hpp
  /usr/include/SFML/Window.hpp
  /usr/include/SFML/System.hpp
@@ -301,6 +300,7 @@ CMakeFiles/collision.dir/src/collision.cpp.o
  /usr/include/SFML/Graphics/Sprite.hpp
  /usr/include/SFML/Graphics/Text.hpp
  /usr/include/SFML/Graphics/VertexBuffer.hpp
+ /home/james/Desktop/Programming/2d_fighting_test/src/include/entity.h
  /usr/include/c++/11/cmath
  /usr/include/math.h
  /usr/include/x86_64-linux-gnu/bits/math-vector.h

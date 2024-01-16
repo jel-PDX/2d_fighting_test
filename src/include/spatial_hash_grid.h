@@ -20,8 +20,14 @@ struct SpatialHashGrid {
   std::vector<std::string> getEntityKeys(Entity* e);
 
  public:
+  // default constructor
+  SpatialHashGrid();
+
   // configures s_bounds, s_dimensions, s_cell_width/height
   SpatialHashGrid(sf::Vector2<float> bounds, sf::Vector2<float> dimensions);
+
+  // same as constructor
+  void setDimensions(sf::Vector2<float> bounds, sf::Vector2<float> dimensions);
 
   // entity e placed in grid based on its position
   void insertEntity(Entity* e);

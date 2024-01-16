@@ -189,7 +189,6 @@ CMakeFiles/handle_global_collisions.dir/src/handle_global_collisions.cpp.o
  /usr/include/c++/11/istream
  /usr/include/c++/11/bits/istream.tcc
  /home/james/Desktop/Programming/2d_fighting_test/src/include/collision.h
- /home/james/Desktop/Programming/2d_fighting_test/src/include/entity.h
  /usr/include/SFML/Graphics.hpp
  /usr/include/SFML/Window.hpp
  /usr/include/SFML/System.hpp
@@ -305,6 +304,7 @@ CMakeFiles/handle_global_collisions.dir/src/handle_global_collisions.cpp.o
  /usr/include/SFML/Graphics/Sprite.hpp
  /usr/include/SFML/Graphics/Text.hpp
  /usr/include/SFML/Graphics/VertexBuffer.hpp
+ /home/james/Desktop/Programming/2d_fighting_test/src/include/entity.h
  /home/james/Desktop/Programming/2d_fighting_test/src/include/collisions_util.h
  /home/james/Desktop/Programming/2d_fighting_test/src/include/game_util.h
  /home/james/Desktop/Programming/2d_fighting_test/src/include/spatial_hash_grid.h

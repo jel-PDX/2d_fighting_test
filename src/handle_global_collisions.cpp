@@ -8,6 +8,7 @@
 #include "game_util.h"
 #include "spatial_hash_grid.h"
 
+/*
 void handleGlobalCollisions() {
   do {
     world_collisions.clear();
@@ -32,3 +33,4 @@ void handleGlobalCollisions() {
     e->setWeightDefaultY();
   }
 }
+*/

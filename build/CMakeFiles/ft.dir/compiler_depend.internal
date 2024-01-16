@@ -303,4 +303,6 @@ CMakeFiles/ft.dir/src/ft.cpp.o
  /home/james/Desktop/Programming/2d_fighting_test/src/include/entity.h
  /home/james/Desktop/Programming/2d_fighting_test/src/include/game_util.h
  /home/james/Desktop/Programming/2d_fighting_test/src/include/scene.h
+ /home/james/Desktop/Programming/2d_fighting_test/src/include/collision.h
+ /home/james/Desktop/Programming/2d_fighting_test/src/include/spatial_hash_grid.h
 

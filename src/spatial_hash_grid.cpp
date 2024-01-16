@@ -5,15 +5,23 @@
 
 #include "entity.h"
 
+SpatialHashGrid::SpatialHashGrid() = default;
+
 SpatialHashGrid::SpatialHashGrid(sf::Vector2<float> bounds,
-                                 sf::Vector2<float> dimensions)
-    : s_bounds{bounds},
-      s_dimensions{dimensions},
-      s_cell_width{bounds.x / dimensions.x},
-      s_cell_height{bounds.y / dimensions.y} {}
+                                 sf::Vector2<float> dimensions) {
+  setDimensions(bounds, dimensions);
+}
 
 std::string SpatialHashGrid::key(sf::Vector2<int> pos) {
   return std::to_string(pos.x) + "." + std::to_string(pos.y);
+}
+
+void SpatialHashGrid::setDimensions(sf::Vector2<float> bounds,
+                                    sf::Vector2<float> dimensions) {
+  s_bounds = bounds;
+  s_dimensions = dimensions;
+  s_cell_width = bounds.x / dimensions.x;
+  s_cell_height = bounds.y / dimensions.y;
 }
 
 std::vector<std::string> SpatialHashGrid::getEntityKeys(Entity *e) {

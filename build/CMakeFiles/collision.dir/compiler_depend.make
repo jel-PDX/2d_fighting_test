@@ -4,7 +4,6 @@
 CMakeFiles/collision.dir/src/collision.cpp.o: ../src/collision.cpp \
   /usr/include/stdc-predef.h \
   ../src/include/collision.h \
-  ../src/include/entity.h \
   /usr/include/SFML/Graphics.hpp \
   /usr/include/SFML/Window.hpp \
   /usr/include/SFML/System.hpp \
@@ -300,6 +299,7 @@ CMakeFiles/collision.dir/src/collision.cpp.o: ../src/collision.cpp \
   /usr/include/SFML/Graphics/Sprite.hpp \
   /usr/include/SFML/Graphics/Text.hpp \
   /usr/include/SFML/Graphics/VertexBuffer.hpp \
+  ../src/include/entity.h \
   /usr/include/c++/11/cmath \
   /usr/include/math.h \
   /usr/include/x86_64-linux-gnu/bits/math-vector.h \
@@ -366,6 +366,8 @@ CMakeFiles/collision.dir/src/collision.cpp.o: ../src/collision.cpp \
 /usr/include/x86_64-linux-gnu/bits/flt-eval-method.h:
 
 /usr/include/x86_64-linux-gnu/bits/math-vector.h:
+
+../src/include/entity.h:
 
 /usr/include/c++/11/tr1/modified_bessel_func.tcc:
 
@@ -529,6 +531,24 @@ CMakeFiles/collision.dir/src/collision.cpp.o: ../src/collision.cpp \
 
 /usr/include/c++/11/ext/type_traits.h:
 
+/usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h:
+
+/usr/include/c++/11/bits/postypes.h:
+
+/usr/include/c++/11/cstdint:
+
+/usr/include/x86_64-linux-gnu/bits/waitstatus.h:
+
+/usr/include/ctype.h:
+
+/usr/include/c++/11/locale:
+
+/usr/include/SFML/System/ThreadLocalPtr.inl:
+
+/usr/include/c++/11/debug/debug.h:
+
+/usr/include/features-time64.h:
+
 /usr/include/x86_64-linux-gnu/c++/11/bits/cpu_defines.h:
 
 /usr/include/x86_64-linux-gnu/bits/timesize.h:
@@ -557,24 +577,6 @@ CMakeFiles/collision.dir/src/collision.cpp.o: ../src/collision.cpp \
 
 /usr/include/c++/11/exception:
 
-/usr/include/ctype.h:
-
-/usr/include/c++/11/locale:
-
-/usr/include/SFML/System/ThreadLocalPtr.inl:
-
-/usr/include/c++/11/debug/debug.h:
-
-/usr/include/features-time64.h:
-
-/usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h:
-
-/usr/include/c++/11/bits/postypes.h:
-
-/usr/include/c++/11/cstdint:
-
-/usr/include/x86_64-linux-gnu/bits/waitstatus.h:
-
 /usr/include/c++/11/tr1/gamma.tcc:
 
 /usr/include/x86_64-linux-gnu/gnu/stubs-64.h:
@@ -594,6 +596,10 @@ CMakeFiles/collision.dir/src/collision.cpp.o: ../src/collision.cpp \
 /usr/include/SFML/System/Sleep.hpp:
 
 /usr/include/c++/11/bits/stringfwd.h:
+
+/usr/include/c++/11/bits/stl_function.h:
+
+/usr/include/c++/11/bits/memoryfwd.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/FILE.h:
 
@@ -675,18 +681,6 @@ CMakeFiles/collision.dir/src/collision.cpp.o: ../src/collision.cpp \
 
 /usr/include/c++/11/bits/stl_tempbuf.h:
 
-/usr/include/x86_64-linux-gnu/bits/floatn-common.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/wint_t.h:
-
-../src/include/entity.h:
-
-/usr/include/c++/11/string:
-
-/usr/include/c++/11/bits/ostream_insert.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h:
-
 /usr/include/x86_64-linux-gnu/bits/time64.h:
 
 /usr/include/c++/11/ctime:
@@ -701,11 +695,21 @@ CMakeFiles/collision.dir/src/collision.cpp.o: ../src/collision.cpp \
 
 /usr/include/SFML/System/Time.hpp:
 
+/usr/include/x86_64-linux-gnu/bits/floatn-common.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/wint_t.h:
+
 /usr/include/wchar.h:
 
 /usr/include/c++/11/bits/cxxabi_init_exception.h:
 
 /usr/include/x86_64-linux-gnu/bits/libc-header-start.h:
+
+/usr/include/c++/11/string:
+
+/usr/include/c++/11/bits/ostream_insert.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/time_t.h:
 
@@ -756,10 +760,6 @@ CMakeFiles/collision.dir/src/collision.cpp.o: ../src/collision.cpp \
 /usr/include/c++/11/streambuf:
 
 /usr/include/x86_64-linux-gnu/c++/11/bits/c++locale.h:
-
-/usr/include/c++/11/bits/memoryfwd.h:
-
-/usr/include/c++/11/bits/stl_function.h:
 
 /usr/include/SFML/Graphics/RenderTexture.hpp:
 
@@ -885,10 +885,6 @@ CMakeFiles/collision.dir/src/collision.cpp.o: ../src/collision.cpp \
 
 /usr/include/c++/11/bits/streambuf_iterator.h:
 
-/usr/include/SFML/Window/Keyboard.hpp:
-
-/usr/include/x86_64-linux-gnu/c++/11/bits/ctype_inline.h:
-
 /usr/include/x86_64-linux-gnu/bits/types/struct_tm.h:
 
 /usr/include/c++/11/bits/locale_facets.tcc:
@@ -986,3 +982,7 @@ CMakeFiles/collision.dir/src/collision.cpp.o: ../src/collision.cpp \
 /usr/include/SFML/System/String.inl:
 
 /usr/include/SFML/Window/Event.hpp:
+
+/usr/include/x86_64-linux-gnu/c++/11/bits/ctype_inline.h:
+
+/usr/include/SFML/Window/Keyboard.hpp:

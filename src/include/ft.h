@@ -21,5 +21,11 @@ class FT {
 
   void addScene(string id);
   Scene* getScene(string id);
+  void updateScene(string id);
+  void handleColScene(string id);
+  void writeScene(string id);
   void renderScene(string id);
+  void undoNudgesScene(string id);
+
+  friend class Scene;
 };

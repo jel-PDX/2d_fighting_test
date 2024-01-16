@@ -92,13 +92,13 @@ CMakeFiles/2d_fighting_test.dir/src/main.cpp.s: cmake_force
 
 2d_fighting_test: CMakeFiles/2d_fighting_test.dir/src/main.cpp.o
 2d_fighting_test: CMakeFiles/2d_fighting_test.dir/build.make
+2d_fighting_test: libscene.a
 2d_fighting_test: libspatial_hash_grid.a
 2d_fighting_test: libgame_util.a
 2d_fighting_test: libhandle_global_collisions.a
 2d_fighting_test: libcollision.a
 2d_fighting_test: libcollisions_util.a
 2d_fighting_test: libentity.a
-2d_fighting_test: libscene.a
 2d_fighting_test: libft.a
 2d_fighting_test: libplayer.a
 2d_fighting_test: libstatic_object.a

@@ -92,26 +92,16 @@ int main() {
       game.getScene("1")->s_player->setJump(Player::JUMP);
 
     // Update Entities
-    for (Entity* e : game_entities) e->update();
+    game.updateScene("1");
 
     // Handle Collisions
-    handleGlobalCollisions();
+    game.handleColScene("1");
 
     // Global Entities Movement
-    for (Entity* e : game_entities)
-      e->setPos(e->getPos().x + e->getVel().x, e->getPos().y + e->getVel().y);
+    game.writeScene("1");
 
     // Undo Nudge Velocities, Manage Gravity Accel
-    for (Entity* e : game_entities) {
-      sf::Vector2<float> nudge{world_nudges[e->getHash()]};
-      if (nudge.y > 0) {
-        e->setVel(e->getVel().x + nudge.x, 0);
-      } else
-        e->setVel(e->getVel().x + nudge.x, e->getVel().y + nudge.y);
-    }
-    world_nudges.clear();
-
-    for (Entity* e : game_entities) SHG.updateEntity(e);
+    game.undoNudgesScene("1");
 
     // Rendering
     game.renderScene("1");

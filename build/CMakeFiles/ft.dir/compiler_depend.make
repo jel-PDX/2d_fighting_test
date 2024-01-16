@@ -301,8 +301,14 @@ CMakeFiles/ft.dir/src/ft.cpp.o: ../src/ft.cpp \
   /usr/include/SFML/Graphics/VertexBuffer.hpp \
   ../src/include/entity.h \
   ../src/include/game_util.h \
-  ../src/include/scene.h
+  ../src/include/scene.h \
+  ../src/include/collision.h \
+  ../src/include/spatial_hash_grid.h
 
+
+../src/include/spatial_hash_grid.h:
+
+../src/include/collision.h:
 
 ../src/include/scene.h:
 

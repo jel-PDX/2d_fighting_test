@@ -188,7 +188,6 @@ CMakeFiles/handle_global_collisions.dir/src/handle_global_collisions.cpp.o: ../s
   /usr/include/c++/11/istream \
   /usr/include/c++/11/bits/istream.tcc \
   ../src/include/collision.h \
-  ../src/include/entity.h \
   /usr/include/SFML/Graphics.hpp \
   /usr/include/SFML/Window.hpp \
   /usr/include/SFML/System.hpp \
@@ -304,6 +303,7 @@ CMakeFiles/handle_global_collisions.dir/src/handle_global_collisions.cpp.o: ../s
   /usr/include/SFML/Graphics/Sprite.hpp \
   /usr/include/SFML/Graphics/Text.hpp \
   /usr/include/SFML/Graphics/VertexBuffer.hpp \
+  ../src/include/entity.h \
   ../src/include/collisions_util.h \
   ../src/include/game_util.h \
   ../src/include/spatial_hash_grid.h
@@ -312,6 +312,8 @@ CMakeFiles/handle_global_collisions.dir/src/handle_global_collisions.cpp.o: ../s
 ../src/include/spatial_hash_grid.h:
 
 ../src/include/collisions_util.h:
+
+../src/include/entity.h:
 
 /usr/include/SFML/Graphics/VertexBuffer.hpp:
 
@@ -376,8 +378,6 @@ CMakeFiles/handle_global_collisions.dir/src/handle_global_collisions.cpp.o: ../s
 /usr/include/SFML/Window/Joystick.hpp:
 
 /usr/include/SFML/Window/Cursor.hpp:
-
-/usr/include/SFML/Window/ContextSettings.hpp:
 
 /usr/include/c++/11/bits/locale_classes.h:
 
@@ -727,8 +727,6 @@ CMakeFiles/handle_global_collisions.dir/src/handle_global_collisions.cpp.o: ../s
 
 /usr/include/c++/11/string:
 
-../src/include/entity.h:
-
 /usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h:
 
 /usr/include/c++/11/bits/ostream_insert.h:
@@ -766,6 +764,8 @@ CMakeFiles/handle_global_collisions.dir/src/handle_global_collisions.cpp.o: ../s
 /usr/include/alloca.h:
 
 /usr/include/c++/11/cstdio:
+
+/usr/include/SFML/Window/ContextSettings.hpp:
 
 /usr/include/stdio.h:
 

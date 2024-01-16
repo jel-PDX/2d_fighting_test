@@ -300,10 +300,12 @@ CMakeFiles/scene.dir/src/scene.cpp.o
  /usr/include/SFML/Graphics/Sprite.hpp
  /usr/include/SFML/Graphics/Text.hpp
  /usr/include/SFML/Graphics/VertexBuffer.hpp
- /home/james/Desktop/Programming/2d_fighting_test/src/include/dynamic_object.h
+ /home/james/Desktop/Programming/2d_fighting_test/src/include/collision.h
  /home/james/Desktop/Programming/2d_fighting_test/src/include/entity.h
- /home/james/Desktop/Programming/2d_fighting_test/src/include/game_util.h
- /home/james/Desktop/Programming/2d_fighting_test/src/include/player.h
  /home/james/Desktop/Programming/2d_fighting_test/src/include/spatial_hash_grid.h
+ /home/james/Desktop/Programming/2d_fighting_test/src/include/collisions_util.h
+ /home/james/Desktop/Programming/2d_fighting_test/src/include/dynamic_object.h
+ /home/james/Desktop/Programming/2d_fighting_test/src/include/ft.h
+ /home/james/Desktop/Programming/2d_fighting_test/src/include/player.h
  /home/james/Desktop/Programming/2d_fighting_test/src/include/static_object.h
 

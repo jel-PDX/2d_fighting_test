@@ -12,12 +12,16 @@ FT::FT() : ft_window_width{1280}, ft_window_height{720}, ft_scene_map{} {
 
 sf::RenderWindow* FT::getWindow() { return &ft_window; }
 
-void FT::addScene(string id) { ft_scene_map[id] = new Scene(); }
+void FT::addScene(string id) { ft_scene_map[id] = new Scene(this); }
 
 Scene* FT::getScene(string id) { return ft_scene_map[id]; }
 
-void FT::renderScene(string id) {
-  ft_window.clear();
-  for (Entity* e : game_entities) ft_window.draw(e->getSpr());
-  ft_window.display();
-}
+void FT::updateScene(string id) { ft_scene_map[id]->update(); }
+
+void FT::handleColScene(string id) { ft_scene_map[id]->handleCollisions(); }
+
+void FT::writeScene(string id) { ft_scene_map[id]->writeMovement(); }
+
+void FT::renderScene(string id) { ft_scene_map[id]->render(); }
+
+void FT::undoNudgesScene(string id) { ft_scene_map[id]->undoNudges(); }

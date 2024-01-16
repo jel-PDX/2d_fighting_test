@@ -304,7 +304,6 @@ CMakeFiles/collisions_util.dir/src/collisions_util.cpp.o: ../src/collisions_util
   /usr/include/c++/11/iostream \
   /usr/include/c++/11/istream \
   /usr/include/c++/11/bits/istream.tcc \
-  ../src/include/game_util.h \
   ../src/include/spatial_hash_grid.h
 
 
@@ -711,8 +710,6 @@ CMakeFiles/collisions_util.dir/src/collisions_util.cpp.o: ../src/collisions_util
 /usr/include/c++/11/iosfwd:
 
 /usr/include/c++/11/initializer_list:
-
-../src/include/game_util.h:
 
 /usr/include/stdc-predef.h:
 

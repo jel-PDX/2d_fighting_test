@@ -1,6 +1,11 @@
 #pragma once
 
+#include <SFML/Graphics.hpp>
+#include <unordered_map>
+
 #include "entity.h"
+
+using std::unordered_map;
 
 class Collision {
  public:
@@ -12,11 +17,14 @@ class Collision {
 
   ColDir c_col_dir;
 
+  unordered_map<size_t, sf::Vector2<float>>* c_world_nudges;
+
   sf::Vector2<float> nudge();
 
  public:
   Collision();
-  Collision(Entity* e1, Entity* e2, ColDir col_dir);
+  Collision(Entity* e1, Entity* e2, ColDir col_dir,
+            unordered_map<size_t, sf::Vector2<float>>* world_nudges);
   void resolve();
   void resolveImbalance(Entity::Weight w1, Entity::Weight w2);
   void resolveBalance(Entity::Weight w1, Entity::Weight w2);

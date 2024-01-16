@@ -76,8 +76,9 @@ sf::Vector2<float> Collision::nudge() {
 
 Collision::Collision() = default;
 
-Collision::Collision(Entity* e1, Entity* e2, ColDir col_dir)
-    : c_e1{e1}, c_e2{e2}, c_col_dir{col_dir} {}
+Collision::Collision(Entity* e1, Entity* e2, ColDir col_dir,
+                     unordered_map<size_t, sf::Vector2<float>>* world_nudges)
+    : c_e1{e1}, c_e2{e2}, c_col_dir{col_dir}, c_world_nudges{world_nudges} {}
 
 void Collision::resolve() {
   // compare weights of entities
@@ -129,9 +130,9 @@ void Collision::resolveImbalance(Entity::Weight w1, Entity::Weight w2) {
     }
     (*e2)->setVel(v2 - n.x, (*e2)->getVel().y);
     std::size_t e2_hash{(*e2)->getHash()};
-    float old_nudge_x{world_nudges[e2_hash].x};
+    float old_nudge_x{(*c_world_nudges)[e2_hash].x};
     float new_nudge_x{old_nudge_x + n.x};
-    world_nudges[e2_hash].x = new_nudge_x;
+    (*c_world_nudges)[e2_hash].x = new_nudge_x;
     (*e2)->setWeightX((*e1)->getWeightX());
   } else if (c_col_dir == Y_COL) {
     v1 = (*e1)->getVel().y;
@@ -143,9 +144,9 @@ void Collision::resolveImbalance(Entity::Weight w1, Entity::Weight w2) {
     }
     (*e2)->setVel((*e2)->getVel().x, v2 - n.y);
     std::size_t e2_hash{(*e2)->getHash()};
-    float old_nudge_y{world_nudges[e2_hash].y};
+    float old_nudge_y{(*c_world_nudges)[e2_hash].y};
     float new_nudge_y{old_nudge_y + n.y};
-    world_nudges[e2_hash].y = new_nudge_y;
+    (*c_world_nudges)[e2_hash].y = new_nudge_y;
     (*e2)->setWeightY((*e1)->getWeightY());
   }
 }

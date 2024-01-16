@@ -5,7 +5,6 @@
 
 #include "collision.h"
 #include "entity.h"
-#include "game_util.h"
 #include "spatial_hash_grid.h"
 
 bool isXCollision(Entity* e1, Entity* e2) {
@@ -44,7 +43,10 @@ Collision::ColDir* checkCollisionDir(Entity* e1, Entity* e2) {
   return col_dir;
 }
 
-void generateCollision(Entity* e1, Entity* e2, Collision::ColDir col_dir) {
-  Collision new_collision{e1, e2, col_dir};
-  world_collisions.insert({new_collision.getHash(), new_collision});
+void generateCollision(
+    Entity* e1, Entity* e2, Collision::ColDir col_dir,
+    unordered_map<size_t, Collision>* world_collisions,
+    unordered_map<size_t, sf::Vector2<float>>* world_nudges) {
+  Collision new_collision(e1, e2, col_dir, world_nudges);
+  world_collisions->insert({new_collision.getHash(), new_collision});
 }
