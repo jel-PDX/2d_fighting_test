@@ -18,7 +18,7 @@ using std::unordered_map;
 using std::vector;
 
 class Scene {
- public:
+ private:
   int s_num_cells_wide, s_num_cells_high;
   FT* s_ft;
   Player* s_player;
@@ -27,6 +27,7 @@ class Scene {
   unordered_map<size_t, sf::Vector2<float>> s_world_nudges;
   SpatialHashGrid s_SHG;
 
+ public:
   Scene();
   Scene(FT* ft);
   void addEntity(string txr_path, sf::Vector2<int> pos, char type);
@@ -35,4 +36,6 @@ class Scene {
   void writeMovement();
   void undoNudges();
   void render();
+
+  friend class FT;
 };
