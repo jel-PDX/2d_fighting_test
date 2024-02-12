@@ -1,2 +1,0 @@
-/usr/bin/ar qc libspatial_hash_grid.a CMakeFiles/spatial_hash_grid.dir/src/spatial_hash_grid.cpp.o
-/usr/bin/ranlib libspatial_hash_grid.a

@@ -6,8 +6,6 @@
 
 FT::FT() : ft_window_width{1280}, ft_window_height{720}, ft_scene_map{} {}
 
-sf::RenderWindow* FT::getWindow() { return &ft_window; }
-
 void FT::addScene(string id) { ft_scene_map[id] = new Scene(this); }
 
 void FT::selectScene(string id) { select_id = id; }

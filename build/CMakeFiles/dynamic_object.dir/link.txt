@@ -1,2 +1,0 @@
-/usr/bin/ar qc libdynamic_object.a CMakeFiles/dynamic_object.dir/src/dynamic_object.cpp.o
-/usr/bin/ranlib libdynamic_object.a

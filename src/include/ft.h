@@ -27,17 +27,16 @@ class FT {
   void renderScene();
   void undoNudgesScene();
 
+  Player* getPlayer();
+
  public:
   FT();
-  sf::RenderWindow* getWindow();
 
   void addScene(string id);
   void selectScene(string id);
   void addEntity(string txr_path, sf::Vector2<int> pos, char type);
 
   void runScene();
-
-  Player* getPlayer();
 
   friend class Scene;
 };
