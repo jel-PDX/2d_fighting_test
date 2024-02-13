@@ -19,6 +19,7 @@ int main() {
   game.selectScene("1");
 
   game.addEntity("../assets/player.png", {20, 300}, 'p');
+  game.addEntity("../assets/small_box.png", {100, 650}, 'a');
   game.addEntity("../assets/small_box.png", {500, 300}, 'd');
   game.addEntity("../assets/small_box.png", {500, 200}, 'd');
   game.addEntity("../assets/big_box.png", {750, 572}, 's');

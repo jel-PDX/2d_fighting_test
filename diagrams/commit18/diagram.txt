@@ -1,0 +1,92 @@
+@startuml
+!theme reddress-darkblue
+
+left to right direction
+
+abstract class Entity {
+  enum Weight { WEAK, MIDDLE, STRONG }
+  --
+  Weight e_weight_x
+  Weight e_weight_y
+  --
+  virtual void update()
+}
+
+together {
+  Player <|-- Entity  
+
+  DynamicObject <|-- Entity
+
+  StaticObject <|-- Entity
+
+  PassiveObject <|-- Entity
+}
+
+class Collision {
+  enum ColDir { X_COL, Y_COL }
+  --
+  Collision(Entity* e1, Entity* e2, ColDir col_dir)
+  resolve()
+  resolveImbalance(Entity::Weight w1, Entity::Weight w2)
+  resolveBalance(Entity::Weight w1, Entity Weight:: w2)
+}
+
+class SpatialHashGrid {
+  InsertEntity(Entity* e)
+  getCellIndex(sf::Vector2<float> pos)
+  getSurroundingCellIndices(sf::Vector2<int> cell_index)
+  findNear(Entity* e)
+  updateEntity(Entity* e)
+  removeEntity(Entity* e)
+}
+
+class FT {
+  W_PRESSED, A_PRESSED, ...
+  ft_scene_map
+  ft_window
+  select_id
+
+  createWindow()
+
+  // Game Loop util
+  updateScene()
+  handleColScene()
+  writeScene()
+  renderScene()
+  undoNudgesScene()
+
+  getPlayer()
+  --
+  addScene()
+  selectScene()
+  addEntity()
+  runScene()
+}
+
+class Scene {
+  s_ft
+  s_player
+  s_game_entities
+  s_world_collisions
+  s_world_nudges
+  s_SHG
+  --
+  addEntity(txr_path, pos, type)
+  update()
+  handleCollisions()
+  writeMovement()
+  undoNudges()
+  render()
+}
+
+FT <..> Scene : friends
+together {
+FT o-- Scene
+Scene o-- FT
+}
+Player o-- Scene
+Entity o-- Scene
+Collision *-- Scene
+SpatialHashGrid *-- Scene
+
+@enduml

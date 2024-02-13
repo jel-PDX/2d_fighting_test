@@ -3,7 +3,7 @@
 
 class Entity {
  public:
-  enum Weight { WEAK, MIDDLE, STRONG };
+  enum Weight { NA, WEAK, MIDDLE, STRONG };
 
  private:
   sf::Texture e_txr;

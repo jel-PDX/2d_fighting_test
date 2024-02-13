@@ -1,9 +1,12 @@
 #include "scene.h"
 
+#include <iostream>
+
 #include "collision.h"
 #include "collisions_util.h"
 #include "dynamic_object.h"
 #include "ft.h"
+#include "passive_object.h"
 #include "player.h"
 #include "spatial_hash_grid.h"
 #include "static_object.h"
@@ -30,6 +33,13 @@ void Scene::addEntity(string txr_path, sf::Vector2<int> pos, char type) {
     e = new DynamicObject(txr_path);
     e->setPos(pos.x, pos.y);
   }
+  // create passive obj
+  else if (type == 'a') {
+    e = new PassiveObject(txr_path);
+    e->setPos(pos.x, pos.y);
+    s_game_entities.push_back(e);
+    return;
+  }
   // create player
   else if (type == 'p') {
     e = new Player(txr_path);
@@ -53,6 +63,11 @@ void Scene::handleCollisions() {
     s_world_collisions.clear();
 
     for (Entity* e : s_game_entities) {
+      if (e->getWeightX() == Entity::NA) {
+        std::cout << "IN\n";
+        continue;  // discard passive objects
+      }
+
       std::vector<Entity*> nearby_list{s_SHG.findNear(e)};
 
       for (Entity* nearby : nearby_list) {
@@ -77,7 +92,7 @@ void Scene::handleCollisions() {
 void Scene::writeMovement() {
   for (Entity* e : s_game_entities) {
     e->setPos(e->getPos().x + e->getVel().x, e->getPos().y + e->getVel().y);
-    s_SHG.updateEntity(e);
+    if (e->getWeightX() != Entity::NA) s_SHG.updateEntity(e);
   }
 }
 
