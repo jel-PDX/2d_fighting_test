@@ -1,7 +1,5 @@
 #include "scene.h"
 
-#include <iostream>
-
 #include "collision.h"
 #include "collisions_util.h"
 #include "dynamic_object.h"
@@ -64,7 +62,6 @@ void Scene::handleCollisions() {
 
     for (Entity* e : s_game_entities) {
       if (e->getWeightX() == Entity::NA) {
-        std::cout << "IN\n";
         continue;  // discard passive objects
       }
 

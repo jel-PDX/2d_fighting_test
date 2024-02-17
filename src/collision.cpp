@@ -1,7 +1,6 @@
 #include "collision.h"
 
 #include <cmath>
-#include <iostream>
 
 #include "entity.h"
 

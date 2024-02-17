@@ -12,10 +12,12 @@ using std::unordered_map;
 
 class FT {
  private:
-  bool W_PRESSED, A_PRESSED, S_PRESSED, D_PRESSED, SPACE_PRESSED;
+  bool W_PRESSED, A_PRESSED, S_PRESSED, D_PRESSED, SPACE_PRESSED, Q_PRESSED;
   int ft_window_width, ft_window_height;
   unordered_map<string, Scene*> ft_scene_map;
   sf::RenderWindow ft_window;
+  bool ft_end;
+  bool quit_active;
   string select_id;
 
   void createWindow();

@@ -29,5 +29,12 @@ int main() {
 
   game.runScene();
 
+  game.addScene("2");
+  game.selectScene("2");
+  game.addEntity("../assets/ground.png", {0, 700}, 's');
+  game.addEntity("../assets/player.png", {20, 300}, 'p');
+
+  game.runScene();
+
   return 0;
 }

@@ -1,7 +1,6 @@
 #include "collisions_util.h"
 
 #include <SFML/Graphics.hpp>
-#include <iostream>
 
 #include "collision.h"
 #include "entity.h"

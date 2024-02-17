@@ -1,10 +1,17 @@
 #include "ft.h"
 
+#include <iostream>
+
 #include "entity.h"
 #include "player.h"
 #include "scene.h"
 
-FT::FT() : ft_window_width{1280}, ft_window_height{720}, ft_scene_map{} {}
+FT::FT()
+    : ft_window_width{1280},
+      ft_window_height{720},
+      ft_scene_map{},
+      ft_end{false},
+      quit_active{true} {}
 
 void FT::addScene(string id) { ft_scene_map[id] = new Scene(this); }
 
@@ -27,6 +34,9 @@ void FT::undoNudgesScene() { ft_scene_map[select_id]->undoNudges(); }
 Player* FT::getPlayer() { return ft_scene_map[select_id]->s_player; }
 
 void FT::runScene() {
+  // skip all FT scenes once window is closed
+  if (ft_end) return;
+
   // Create window if not already created
   if (!ft_window.isOpen()) createWindow();
 
@@ -36,7 +46,10 @@ void FT::runScene() {
 
     // Event Loop
     while (ft_window.pollEvent(event)) {
-      if (event.type == sf::Event::Closed) ft_window.close();
+      if (event.type == sf::Event::Closed) {
+        ft_end = true;
+        ft_window.close();
+      };
 
       if (event.key.code == sf::Keyboard::W) {
         if (event.type == sf::Event::KeyPressed) {
@@ -70,6 +83,15 @@ void FT::runScene() {
         }
       }
 
+      if (event.key.code == sf::Keyboard::Q) {
+        if (event.type == sf::Event::KeyPressed) {
+          Q_PRESSED = true;
+        } else if (event.type == sf::Event::KeyReleased) {
+          quit_active = true;
+          Q_PRESSED = false;
+        }
+      }
+
       if (event.key.code == sf::Keyboard::Space) {
         if (event.type == sf::Event::KeyPressed) {
           SPACE_PRESSED = true;
@@ -80,6 +102,11 @@ void FT::runScene() {
     }
 
     // State Handling
+    if (Q_PRESSED && quit_active) {
+      quit_active = false;
+      return;
+    };
+
     if (A_PRESSED) {
       getPlayer()->setMoveDir(Player::LEFT);
     } else if (D_PRESSED) {
